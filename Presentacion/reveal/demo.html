@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Tank PI</title>
+
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="color: #088A08">Tank Pi</h1>
+					<h3>Control Remoto y Streaming de Video</h3>
+				</section>
+				<section>
+					<h2>Indice</h2>
+					<ol>
+						<li>Introduccion</li>
+						<li>Materiales</li>
+						<li>Desarollo</li>
+						<li>Estructura</li>
+						<li>Montaje</li>
+					</ol>
+				</section>
+				<section>
+					<h2>1.Introduccion</h2>
+					<ul>
+						<li>Control a distancia via wifi (interfaz web)</li>
+						<li>Reconocimiento facil</li>
+						<li>Emisión de video streaming</li>
+					</ul>
+					<img width="450" height="300" src="img/16.PNG">
+				</section>
+				<section>
+					<h2>2.Materiales</h2>
+					<ul>
+						<li style="font-size: 30px;">Modelo B, Raspberry Pi 3</li>
+						<li style="font-size: 30px;">Bateria externa</li>
+						<li style="font-size: 30px;">Cámara pi revisión 3</li>
+						<li style="font-size: 30px;">Breadboard</li>
+						<li style="font-size: 30px;">Motores DC</li>
+						<li style="font-size: 30px;">Micro SD</li>
+						<li style="font-size: 30px;">L293-D H Bridge</li>
+						
+					</ul>
+					<img width="400" height="250" src="img/14.PNG">
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section style="text-align: left;">
+						<h2 style="text-align: center;">3.Desarrollo</h2>
+						<p style="font-size: 30px; margin-left: 100px;">3.1.Intalacion escritorio remoto</p>
+						<p style="font-size: 30px; margin-left: 100px;">3.2.Instalacion servidor web LIGHTTPD</p>
+						<p style="font-size: 30px; margin-left: 100px;">3.3.Instalacion libreria WiringPI</p>
+						<p style="font-size: 30px; margin-left: 100px;">3.4.Instalacion libreria mjpg-stream</p>
+						<p style="font-size: 30px; margin-left: 100px;">3.5.Instalacion OpenCV</p>
+					</section>
+					<section>
+						<h2>3.1.Intalacion escritorio remoto</h2>
+						<ol>
+							<li >Paquete xrdp</li>
+							<li>Comprobar ip asignada</li>
+							<li>Escritorio remoto (windows)</li>
+						</ol>
+						<img width="420" height="300" src="img/2.PNG">
+					</section>
+					<section>
+						<h2>3.2.Instalacion servidor web LIGHTTPD</h2>
+						<ol>
+							<li>Servidor web LIGHTTPD</li>
+							<li>Activación modo cgi</li>
+							<li>Modificar la ruta predeterminada del servidor</li>
+						</ol>
+						<br>
+					</section>
+					<section>
+						<h2>3.3.Instalacion libreria WiringPI</h2>
+						<ol>
+							<li>Repositorio git</li>
+							<li>Ejecutar el archivo build</li>
+						</ol>
+					</section>
+					<section>
+						<h2>3.4.Instalacion libreria mjpg-stream</h2>
+						<ol>
+							<li>libjpeg</li>
+							<li>Repositorio mjpg-streamer</li>
+							<li>Instalación mjpg-streamer-experimental con make clean all</li>
+						</ol>
+					</section>
+					<section>
+						<img width="600" height="550" src="img/23.PNG">
+					</section>
+					<section>
+						<h2>3.5.Instalacion OpenCV</h2>
+						<ol>
+							<li>libjpeg</li>
+							<li>Intalación OpenCV con make install</li>
+						</ol>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>4.Estructura</h2>
+					</section>
+					<section>
+						<h2>4.1.Reconocimiento Facial</h2>
+						<ol>
+							<li>Archivos</li>
+						</ol>
+						<br>
+						<img width="500" height="400" src="img/carpetas.PNG">
+					</section>
+					<section>
+						<img width="800" height="600" src="img/24.PNG">
+					</section>
+					<section>
+						<h2>4.2.Movimiento Tanque</h2>
+						<ol>
+							<li>Interfaz</li>
+						</ol>
+						<br>
+						<img width="500" height="400" src="img/13.PNG">
+					</section>
+					<section>
+						<video width="500" height="400" src="img/video.mov" controls>
+  					Tu navegador no implementa el elemento <code>video</code>.
+						</video>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>5.Montaje</h2>
+						<img width="550" height="450" src="img/4.JPG">
+					</section>
+					<section>
+						<h2>5.1.Carcasa Tanque</h2>
+						<img width="500" height="500" src="img/3.jpg">
+					</section>
+					<section>
+						<img width="500" height="300" src="img/5.jpg">
+						<img width="500" height="300" src="img/6.jpg">	
+					</section>
+					<section>
+						<h2>5.2.Puente H</h2>
+						<ol>
+							<img width="450" height="300" src="img/7.jpeg">
+						</ol>
+					</section>
+					<section>
+						<h2>5.3.Camara/Raspberry</h2>
+						<ol>
+							<img width="450" height="350" src="img/8.jpg">
+						</ol>
+					</section>
+					<section>
+						<h2>5.4.Union</h2>
+						<img width="450" height="300" src="img/10.jpeg">
+					</section>
+					<section>
+						<img width="450" height="350" src="img/11.jpeg">
+					</section>
+					
+					
+					
+				</section>
+				<section style="text-align: left;">
+					<h1>THE END?</h1>
+					
+					<A HREF="https://github.com/vhar95/ProyectoTank">Github Proyecto TankPi</A>
+
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
